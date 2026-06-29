@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABI Tech DATA AI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+#careers{
+    scroll-behavior: smooth;
+    scroll-margin-top: 100px; /*Adjust to your navbard height*/
+}
+        body {
+            background: #000000;
+            color: rgb(254, 254, 254);
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .img {
+            max-width: 100;
+            height: auto;
+
+        }
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.3;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 5px;
+            width: 100%;
+            background: rgb(253, 246, 246);
+            backdrop-filter: blur(10px);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99999;
+        }
+
+       .logos {
+            max-width: 5%;
+            border-radius: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            scroll-behavior: smooth;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(0, 0, 6);
+            transition: .3s;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #00b7ff;
+        }
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+    padding-bottom: 10px;
+}
+
+.dropdown{
+    text-decoration:none;
+    color:#000;
+    padding:10px;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top: calc(100% - 2px);
+    left:0;
+    background:#fff;
+    min-width:250px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    border-radius:8px;
+    overflow:visible;
+    z-index:9999;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:12px 18px;
+    color:#333;
+    text-decoration:none;
+}
+
+.dropdown-content a:hover{
+    background:#0b74de;
+    color:#fff;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+    visibility: visible;
+    opacity: 1;
+
+}
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)),
+                url('Resources/Front page.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-size: 100px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-content h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content span {
+            color: #fefefe;
+        }
+
+        .hero-content p {
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #0888be;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            background: #0284c7;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 100px;
+            margin-top: 50px;
+         
+        }
+          .serv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 100px;
+            /* background-color: #fff; */
+         
+        }
+
+        .card {
+            background: #05057c;
+            padding: 25px;
+            border-radius: 30px;
+            transition: .4s;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        .kk {
+             background: #150452;
+            padding: 70px;
+            border-radius: 15px;
+            transition: .4s;
+            border: 1px solid rgb(19, 214, 214);
+            
+        }
+
+        .pp {
+            background: #150452;
+            padding: 80px;
+            border-radius: 15px;
+            transition: .4s;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        .kk img {
+            width: 100%;
+            height: 50%;
+           
+
+        }
+
+        .pp img {
+            width: 100%;
+            height: 50%;
+        }
+
+        .mdimg {
+            width: 20%;
+            height: 40%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgb(252, 252, 252);
+        }
+
+        .kk:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgb(255, 255, 255);
+        }
+
+        .pp:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgb(255, 255, 255);
+        }
+
+    .career-section{
+    padding:70px 8%;
+    background:#000106;
+}
+
+.career-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.career-header h2{
+    color:#f2f3f5;
+    font-size:40px;
+}
+
+.career-header h3{
+    margin:10px 0;
+}
+
+.career-header p{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+}
+
+.career-content{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.career-right{
+    flex:1;
+    min-width:320px;
+    background:#02195c;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.career-left{
+    flex:1;
+    min-width: 320px;
+    background:#02195c ;
+    padding:30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    text-align:left;
+}
+
+.career-left h3{
+    text-align: center;
+}
+
+.career-left ul{
+    list-style:none;
+    padding:0;
+}
+
+.career-left li{
+    padding:10px 0;
+    font-size:17px;
+}
+
+.career-right input,
+.career-right select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #050000;
+    border-radius:6px;
+}
+
+.check{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:15px 0;
+    font-size:14px;
+    color: #f5f8f9;
+}
+
+.career-right button{
+    width:100%;
+    padding:14px;
+    background:#0896a3;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.career-right button:hover{
+    background:#095bae;
+}
+
+.privacy-box{
+    display: flex;
+    align-items: center;    /* Vertically aligns checkbox and text */
+    justify-content: flex-start;
+    gap: 10px;              /* Space between checkbox and text */
+    margin: 15px 0;
+}
+
+.privacy-box input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.privacy-box label{
+    color: #f9f7f7;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.privacy-box a{
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.privacy-box a:hover{
+    text-decoration: underline;
+}
+
+        .card h3 {
+            margin: bottom 20px;
+            text-align: center;
+            color: #fbfeff;
+        }
+
+        .journey {
+            background: #000000;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        .step {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #01060c, #04070c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(11, 0, 0);
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+
+        .step img {
+            width: 220px;
+            height: 220px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step:hover {
+            transform: translateY(10px);
+            box-shadow: 0 10px 30px rgb(255, 255, 255);
+        }
+
+        .contact {
+            background: #00050e;
+            
+        }
+
+        .info{
+            background: rgb(0, 0, 8);
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            padding: 15px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background: #072b64;
+            color: white;
+        }
+
+        button {
+            padding: 15px;
+            border: none;
+            background: #11abce;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+
+        button:hover {
+            background: #030008;
+        }
+
+        footer {
+            background: #020617;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .close {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Resources/logo.png" width="300" height="80" alt="ABI TECH AI">
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <div class="dropdown">
+    <a href="#services" class="dropbtn">Services ▾</a>
+
+    <div class="dropdown-content">
+        <a href="#webdevelopment">Web Development</a>
+        <a href="#appdevelopment">Mobile App Development</a>
+        <a href="#e-commerce">E-Commerce</a>
+        <a href="#digitalmarketing">Digital Marketing</a>
+        <a href="#softwaredevelopment">Software Development</a>
+        <a href="#itconsulting">IT Consulting</a>
+    </div>
+</div>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#careers">Careers</a>
+            <a href="#whychooseabitech?">Why Choose ABI Tech?</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content" style="text-align: center;">
+
+            <h1>ABITech DATA AI </h1>
+            <br>
+            <h2><span>Digital Solutions</span></h2>
+
+            <p>
+                Professional Web Development, Mobile Apps,
+                Software Development, AI Solutions,
+                <br><span>Digital Marketing,and IT Consulting Services.</span>
+            </p>
+
+            <a href="#" class="btn" onclick="openModal()">
+                Start Your Project
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>About Company</h3>
+                <img src="Resources/about company.png" width="100%" height="40%" />
+                <p>
+                    ABI Tech DATA AI is a technology-driven company specializing in Artificial Intelligence, Data
+                    Analytics, Machine Learning, Automation, and Digital Transformation. We empower businesses to unlock
+                    the full potential of their data and accelerate growth through innovative, intelligent solutions.
+
+                    By combining advanced technology with industry expertise, we deliver scalable, reliable, and
+                    future-ready services that help organizations make smarter decisions, enhance efficiency, and stay
+                    ahead in a rapidly evolving digital world. At ABI Tech DATA AI, we transform data into actionable
+                    insights and innovation into measurable success.
+                </p>
+            </div>
+
+            <div class="mdimg" ">
+<img src="Resources/Chairperson.jpeg" width="500%" height="250%" />
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="serv-grid">
+
+<!-- <section id="webdevelopment" style="background-color: red;"> -->
+            <div class="kk" id="webdevelopment">
+                <div class="web-img-box">
+                    <img src="Resources/web development.png" />
+                </div>
+                <p>At ABI Tech Data AI, we create modern, responsive, and high-performance websites that help businesses
+                    grow online. Our web development solutions combine innovative design, advanced technology, and
+                    user-focused functionality to deliver exceptional digital experiences.
+                    .</p>
+            </div>
+<!-- </section> -->
+
+<!-- <section id="appdevelopment" style="background-color: yellow"> -->
+            <div class="kk" id = appdevelopment>
+                <div class="web-img-box">
+                    <img src="Resources/mob app development.png" />
+                </div>
+                <p>At ABI Tech Data AI, we develop innovative, high-performance mobile applications that help businesses
+                    connect with customers anytime, anywhere. Our expert developers create intuitive, secure, and
+                    scalable mobile solutions tailored to your unique business needs.
+                    .</p>
+            </div>
+<!-- </section> -->
+
+<!-- <section id="e-commerce"> -->
+            <div class="kk" id="e-commerce">
+                <div class="web-img-box">
+                    <img src="Resources/e-commerce.png" />
+                </div>
+                <p>At ABI Tech Data AI, we create powerful, secure, and user-friendly e-commerce platforms that help
+                    businesses expand their reach, increase sales, and deliver exceptional shopping experiences. Our
+                    customized online store solutions are designed to attract customers, streamline operations, and
+                    maximize revenue.
+                    .</p>
+            </div>
+<!-- </section> -->
+
+<!-- <section id="digitalmarketing"> -->
+            <div class="kk" id="digitalmarketing">
+                <div class="web-img-box">
+                    <img src="Resources/Digital Marketing.png" />
+                </div>
+                <p>At ABI Tech Data AI, we deliver result-driven digital marketing solutions that help businesses build
+                    a strong online presence, attract quality leads, and convert visitors into loyal customers. Our
+                    data-driven strategies and innovative marketing techniques ensure maximum visibility and measurable
+                    growth.
+                </p>
+            </div>
+<!-- </section> -->
+
+<!-- <section id="softwaredevelopment"> -->
+           <div class="kk" id="softwaredevelopment">
+                <div class="web-img-box">
+                    <img src="Resources/Software Development.png" />
+                </div>
+                <p>At ABI Tech Data AI, we develop powerful, scalable, and intelligent software solutions that help
+                    businesses streamline operations, improve productivity, and accelerate growth. Our expert team
+                    combines cutting-edge technologies, industry best practices, and innovative thinking to create
+                    software that delivers real business value.
+                    .</p>
+            </div>
+<!-- </section> -->
+
+<!-- <section id="itconsulting"> -->
+            <div class="kk" id="itconsulting">
+                <div class="web-img-box">
+                    <img src="Resources/IT Consulting.png" />
+                </div>
+                <p>At ABI Tech Data AI, we provide expert IT consulting services that help organizations leverage
+                    technology to improve efficiency, reduce costs, and achieve sustainable growth. Our consultants work
+                    closely with businesses to understand their challenges, identify opportunities, and develop
+                    technology strategies that drive success.</p>
+            </div>
+<!-- </section> -->
+        </div>
+
+    </section>
+
+    <section id="portfolio">
+
+        <h2>Portfolio</h2>
+
+        <div class="grid">
+
+            <div class="pp">
+                <h3></h3>
+                <div class="web-img-box">
+                    <img src="Resources/e-commerce (2).png" />
+                </div>
+                <p>❤️ User-Friendly Shopping Experience
+
+                    <br><span>🔔 Customer Accounts & Wishlist</span>
+
+                    <br></span>☁️ Scalable & Cloud-Ready Solutions (UI/UX)</span>
+
+                    <br><span>🛡️ Advanced Security & SSL Protection</span>
+                </p>
+            </div>
+
+            <div class="pp">
+                <h3></h3>
+                <div class="web-img-box">
+                    <img src="Resources/car management system.png" />
+                </div>
+                <p>🚗 Fleet & Vehicle Management
+                    <br><span>📍 Real-Time GPS Tracking</span>
+
+                    <br><span>💳 Secure Online Payment Integration</span>
+
+                    <br><span>🔐 Role-Based Admin Dashboard</span>
+                </p>
+            </div>
+
+            <div class="pp">
+                <h3></h3>
+                <div class="web-img-box">
+                    <img src="Resources/school management system.png" />
+                </div>
+                <p>🎓 Student Information Management
+
+                    <br><span>📈 Performance Reports & Analytics</span>
+
+                    <br><span>🚌 Transport & Route Management</span>
+
+                    <br><span>📖 Homework & Assignment Management</span>
+                </p>
+            </div>
+
+            <div class="pp">
+                <h3></h3>
+                <div class="web-img-box">
+                    <img src="Resources/billing system.png" />
+                </div>
+                <p>📄 Professional Invoice Generation
+
+                    <br><span>💳 Secure Online Payment Integration</span>
+
+                    <br><span>👥 Customer & Vendor Management</span>
+
+                    <br><span>📦 Product & Inventory Tracking</span>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+<!-- Career Section -->
+<section id="careers">
+
+    <div class="career-header">
+        <h2>Careers</h2>
+        <h3>Build the Future with ABI Tech Data AI</h3>
+        <p>
+            We are looking for passionate developers, designers, and innovators
+            to create amazing digital products.
+        </p>
+    </div>
+
+    <div class="career-content">
+
+        <!-- Why Join Us -->
+        <div class="career-left">
+            <h3>Why Join Us?</h3>
+
+            <h4>
+                <li> Flexible Work Environment</li>
+                <li> Competitive Salary</li>
+                <li> Career Growth Opportunities</li>
+                <li> Learning & Development</li>
+                <li> Friendly Team Culture</li>
+                <li> Latest Technologies</li>
+                <li> Innovative Projects</li>
+                <li> Coloborative Culture</li>
+                <li> Diverse Opportunity</li>
+                <li> Work Life Balance</li>
+                <li> Performance Recognition</li>
+                <li> Innovation Driven Environment</li>
+                <li> Startup Experience</li>
+            </h4>
+        </div>
+
+        <!-- Career Form -->
+        <div class="career-right">
+            <h3>Apply Now</h3>
+
+            <form action="career.php" method="POST" enctype="multipart/form-data">
+
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+
+                <select name="position" required>
+                    <option value="">Select Position</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>UI/UX Designer</option>
+                    <option>Digital Marketing</option>
+                </select>
+
+                <input type="url" name="linkedin" placeholder="LinkedIn Profile URL">
+
+                <label for="resume">Upload Resume</label>
+                
+            <input type="file" id="resume" name="resume" required>
+              
+                <div class="privacy-box">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">
+                        I agree to the <a href="privacy.html">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit">Submit Application</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="whychooseabitech?" class="contact">
+
+        <h2>Why Choose ABI Tech?</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>💡Innovative Solutions</h3>
+                <br><span>Our innovative approach helps businesses improve efficiency, enhance user experience, and
+                    achieve sustainable growth.</span>
+            </div>
+
+            <div class="card">
+                <h3>👥Experienced Team</h3>
+                <br><span>We work closely with every client to ensure quality, innovation, and timely project
+                    delivery.</span>
+            </div>
+
+            <div class="card">
+                <h3>📚Reliable & Secure</h3>
+                <br><span>We deliver reliable, secure, and high-quality digital solutions with complete transparency,
+                    ensuring your business grows with confidence.</span>
+            </div>
+
+            <div class="card">
+                <h3>📞Dedicated Support</h3>
+                <br><span>Our expert support team is available to assist you whenever you need help.Receive quick
+                    resolutions to your queries and technical issues with minimal downtime.</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="journey">
+
+        <h2>User Journey Overview</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <img src="Resources/view website.png" style="width:245px; height:245px; box-shadow:8px white" />
+            </div>
+            <div class="step">
+                <img src="Resources/explore services.png" style="width:275px; height:275px; box-shadow:8px white" />
+            </div>
+            <div class="step">
+                <img src="Resources/Request Quote.png" style="width:320px; height:320px; box-shadow:8px white" />
+            </div>
+            <div class="step">
+                <img src="Resources/project decission.png" style="width:250px; height:250px; box-shadow:8px white" />
+            </div>
+            <div class="step">
+                <img src="Resources/development phase.png" style="width:250px; height:250px; box-shadow:8px white" />
+            </div>
+            <div class="step">
+                <img src="Resources/testing & QA.png" style="width:250px; height:250px; box-shadow:8px white" />
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="info">
+
+        <h2>Contact Us</h2>
+
+        <p>☎️ +91 81748 17485 | +91 79917 99916
+
+<br><span>📧 info@abitechdataai.com</span>
+
+<br><span>🌐 www.abitechdataai.com</span>
+
+<br><span>📍 Krishna Towers, Tirupattur Main Road,</span> 
+<br><span>Gajalnaickenpatti, Tirupattur Taluk & District, </span>
+<br><span>Tamil Nadu-635901.</span></p>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 ABITech DATA AI | Web Development | Software Development | AI Solutions
+        </p>
+    </footer>
+
+    <div class="modal" id="quoteModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+
+
+            <h2>Start Your Project</h2>
+
+            <form>
+
+                <input type="text" placeholder="Name">
+
+                <input type="email" placeholder="Email">
+
+                <input type="text" placeholder="Service Needed">
+
+                <textarea rows="5" placeholder="Project Requirements"></textarea>
+
+                <button>Send Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("quoteModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("quoteModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            let quoteModal = document.getElementById("quoteModal"); 
+
+            console.log("quoteModal:", quoteModal);
+            console.log("htmlModal:", htmlModal);
+
+            if (event.target == quoteModal) {
+                quoteModal.style.display = "none";
+            }
+
+            if (event.target == htmlModal) {
+                htmlModal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
